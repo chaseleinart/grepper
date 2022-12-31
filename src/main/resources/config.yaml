@@ -1,2 +1,3 @@
 patterns:
   - com.cml.patterns.RBeforeGHPattern
+  - com.cml.patterns.ABeforeBPattern

@@ -8,10 +8,11 @@ import java.util.List;
 
 public class PatternExecutor {
 
-    // Takes a list of ExecutablePatterns and a BufferedReader, representing the contents of a named file, and executes the
+    // Takes a list of ExecutablePatterns representing the contents of the config file, and executes the
     // configured patterns against the file.
-    public static void executePatterns(List<ExecutablePattern> executablePatterns, BufferedReader br) throws IOException {
+    public static void executePatterns(List<ExecutablePattern> executablePatterns) throws IOException {
         for (ExecutablePattern pattern : executablePatterns) {
+            BufferedReader br = BufferedReaderLoader.getNewBufferedReader();
             pattern.processInput(br);
         }
     }
